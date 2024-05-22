@@ -1,0 +1,14 @@
+<h1>Available Pick-up Games</h1>
+
+<% if @pickups.any?%>
+<ul>
+  <% @pickups.each do |pickup| %>
+    <li>
+      <%= pickup.name %> - <%= pickup.location %>
+      <%= link_to 'Join', pickup_path(pickup), class: 'btn btn-primary' %>
+    </li>
+  <% end %>
+</ul>
+<% else %>
+<h1> Nothing</h1>
+<% end %>

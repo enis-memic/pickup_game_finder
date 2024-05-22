@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pickups/new'
+  get 'pickups/index'
   get 'pages/home'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -9,4 +11,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'pages#home'
+
+
+  get 'create_pickup', to: 'pickups#new', as: 'create_pickup'
+  get 'join_pickup', to: 'pickups#index', as: 'join_pickup'
+
+  resources :pickups, only: [:new, :create, :index, :show]
 end

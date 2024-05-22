@@ -1,0 +1,17 @@
+<h1>Create a New Pick-up Game</h1>
+<%= form_with model: @pickup, url: pickups_path do |form| %>
+  <!-- Form fields for creating a pick-up game -->
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Create Pick-up' %>
+  </div>
+<% end %>

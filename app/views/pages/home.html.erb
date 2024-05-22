@@ -1,8 +1,19 @@
-<% if current_user %> 
-<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+<% if user_signed_in? %>
+  <h1>Welcome, <%= current_user.email %>!</h1>
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+
+  <div>
+    <%= link_to 'Create Pick-up', create_pickup_path, class: 'btn btn-primary' %>
+    <%= link_to 'Join Pick-up', join_pickup_path, class: 'btn btn-secondary' %>
+  </div>
 <% else %>
-<%= link_to "Log In", new_user_session_path %>
-<%= link_to  "Sign Up", new_user_registration_path %>
-<% end %> 
+    <% if current_user %> 
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+    <% else %>
+        <%= link_to "Log In", new_user_session_path %>
+        <%= link_to  "Sign Up", new_user_registration_path %>
+    <% end %> 
+
+<% end %>
 
 <h1>Pick up Finder</h1>
