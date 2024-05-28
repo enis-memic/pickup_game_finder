@@ -30,6 +30,6 @@ class PickupsController < ApplicationController
   end
 
   def pickup_params
-    params.require(:pickup).permit(:name, :location)
-  end
+    params.require(:pickup).permit(:name, :location, :date, :time, :max_people, :min_people)
+  end  
 end
