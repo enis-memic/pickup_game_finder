@@ -1,3 +1,5 @@
+<h1>Pick up Finder</h1>
+
 <% if user_signed_in? %>
   <h1>Welcome, <%= current_user.email %>!</h1>
   <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
@@ -15,5 +17,3 @@
     <% end %> 
 
 <% end %>
-
-<h1>Pick up Finder</h1>

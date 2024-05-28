@@ -11,6 +11,26 @@
     <%= form.text_field :location %>
   </div>
 
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.time_field :time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_people %>
+    <%= form.number_field :max_people %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min_people %>
+    <%= form.number_field :min_people %>
+  </div>
+
   <div class="actions">
     <%= form.submit 'Create Pick-up' %>
   </div>

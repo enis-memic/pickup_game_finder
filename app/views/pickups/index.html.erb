@@ -4,7 +4,7 @@
 <ul>
   <% @pickups.each do |pickup| %>
     <li>
-      <%= pickup.name %> - <%= pickup.location %>
+      <%= link_to "#{pickup.name} - #{pickup.location}", pickup_path(pickup), class:"button" %>
       <%= link_to 'Join', pickup_path(pickup), class: 'btn btn-primary' %>
     </li>
   <% end %>
