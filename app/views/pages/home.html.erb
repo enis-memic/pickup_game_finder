@@ -1,19 +1,11 @@
-<h1>Pick up Finder</h1>
-
-<% if user_signed_in? %>
-  <h1>Welcome, <%= current_user.email %>!</h1>
-  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-
-  <div>
-    <%= link_to 'Create Pick-up', create_pickup_path, class: 'btn btn-primary' %>
-    <%= link_to 'Join Pick-up', join_pickup_path, class: 'btn btn-secondary' %>
-  </div>
-<% else %>
-    <% if current_user %> 
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-    <% else %>
-        <%= link_to "Log In", new_user_session_path %>
-        <%= link_to  "Sign Up", new_user_registration_path %>
-    <% end %> 
-
-<% end %>
+<div class="container mx-auto p-8 rounded-lg shadow-md">
+  <% if user_signed_in? %>
+    <div class="text-center mt-20">
+      <h1 class="text-4xl font-bold mb-6">Welcome, <%= current_user.email %>!</h1>
+      <div class="flex justify-center space-x-4">
+        <%= link_to 'Create Pick-up', create_pickup_path, class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg' %>
+        <%= link_to 'Join Pick-up', join_pickup_path, class: 'bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg' %>
+      </div>
+    </div>
+  <% end %>
+</div>
