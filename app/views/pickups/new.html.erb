@@ -1,37 +1,34 @@
-<h1>Create a New Pick-up Game</h1>
-<%= form_with model: @pickup, url: pickups_path do |form| %>
+<h1 class="text-3xl font-bold mb-6">Create a New Pick-up Game</h1>
+<%= form_with model: @pickup, url: pickups_path, class: "space-y-4" do |form| %>
   <!-- Form fields for creating a pick-up game -->
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :name, class: "block text-lg font-medium text-gray-700" %>
+    <%= form.text_field :name, class: "mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" %>
   </div>
 
   <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
+    <%= form.label :location, class: "block text-lg font-medium text-gray-700" %>
+    <%= form.text_field :location, class: "mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" %>
   </div>
 
   <div class="field">
-    <%= form.label :date %>
-    <%= form.date_field :date %>
+    <%= form.label :date, class: "block text-lg font-medium text-gray-700" %>
+    <%= form.date_field :date, class: "mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" %>
   </div>
 
   <div class="field">
-    <%= form.label :time %>
-    <%= form.time_field :time %>
+    <%= form.label :time, class: "block text-lg font-medium text-gray-700" %>
+    <%= form.time_field :time, class: "mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" %>
   </div>
 
   <div class="field">
-    <%= form.label :max_people %>
-    <%= form.number_field :max_people %>
+    <%= form.label :max_people, class: "block text-lg font-medium text-gray-700" %>
+    <%= form.number_field :max_people, class: "mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" %>
   </div>
 
   <div class="field">
-    <%= form.label :min_people %>
-    <%= form.number_field :min_people %>
-  </div>
+    <%= form.label :min_people, class: "block text-lg font-medium text-gray-700" %>
+    <%= form.number_field :min_people, class: "mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" %>
+  </div
 
-  <div class="actions">
-    <%= form.submit 'Create Pick-up' %>
-  </div>
 <% end %>
