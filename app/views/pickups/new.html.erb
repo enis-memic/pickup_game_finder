@@ -1,6 +1,5 @@
 <h1 class="text-3xl font-bold mb-6">Create a New Pick-up Game</h1>
 <%= form_with model: @pickup, url: pickups_path, class: "space-y-4" do |form| %>
-  <!-- Form fields for creating a pick-up game -->
   <div class="field">
     <%= form.label :name, class: "block text-lg font-medium text-gray-700" %>
     <%= form.text_field :name, class: "mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" %>
